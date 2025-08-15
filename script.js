@@ -115,11 +115,13 @@ async function getCountryDataAndNeighboursParallel(country) {
  * @param {Array} neighbours - Array of border country codes.
  */
 async function fetchNeighboursParallel(neighbours) {
+    // Array of Promises
     const neighbourPromises = neighbours.map(neighbour => 
         getJSON(`https://restcountries.com/v2/alpha/${neighbour}`, `Neighbour not found`));
 
     const result = await Promise.allSettled(neighbourPromises);
     result.forEach(neighbour => {
+        // Call renderCountry only if the promise if fulfilled
         if (neighbour.status === "fulfilled") {
             renderCountry(neighbour.value, "neighbour"); // call the renderCountry method with the data
         }
