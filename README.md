@@ -29,9 +29,7 @@ VERSION or DATE: 15/08/202025
 
 AUTHORS: Jonas Schmedtmann edited by Massimiliano Crisafulli
 
-HOW TO START THIS PROJECT: Launch `index.html`
-
-USER INSTRUCTIONS: 
+HOW TO START THIS PROJECT: 
 - Launch `index.html` with Google Chrome
 - Open the console (Windows: Ctrl + shift + j)
 - type: getCountryDataAndNeighboursParallel("spain")
